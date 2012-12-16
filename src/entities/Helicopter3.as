@@ -1,0 +1,25 @@
+package entities {
+	import net.flashpunk.Entity;
+	import net.flashpunk.graphics.Image;
+	import net.flashpunk.graphics.Spritemap;
+	import utils.Resource;
+
+	public class Helicopter3 extends NotVillain{
+		
+		public function Helicopter3() {
+			super(0);
+			var sprite:Spritemap = new Spritemap(Resource.HELICO3, 47, 19);
+			sprite.add("fly", [0, 1, 0, 2], 30, true);
+			sprite.play("fly");
+			graphic = sprite;
+			setHitbox(39, 19, -7);
+		}
+		
+		override public function initialize():void {
+			super.initialize();
+			life = 4;
+		}
+		
+	}
+
+}
